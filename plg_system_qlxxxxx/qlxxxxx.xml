@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" version="1.0.1" group="system" method="upgrade">
+    <name>PLG_SYSTEM_QLXXXXX</name>
+    <author>Ingo Holewczuk; Mareike Riegel</author>
+    <creationDate>2019</creationDate>
+    <copyright>Copyright (C) 2019 ql.de All rights reserved.</copyright>
+    <authorEmail>mareike.riegel@ql.de</authorEmail>
+    <authorUrl>http://www.ql.de/</authorUrl>
+    <version>1.0.1</version>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <description>PLG_SYSTEM_QLXXXXX_DESCRIPTION</description>
+    <files>
+        <filename plugin="qlxxxxx">qlxxxxx.php</filename>
+        <filename plugin="qlxxxxx">index.html</filename>
+        <filename plugin="qlxxxxx">license.txt</filename>
+        <folder plugin="qlxxxxx">css</folder>
+        <folder plugin="qlxxxxx">js</folder>
+        <folder plugin="qlxxxxx">language</folder>
+        <folder plugin="qlxxxxx">tmpl</folder>
+    </files>
+    <media folder="media" destination="plg_system_qlxxxxx">
+        <folder>css</folder>
+        <folder>js</folder>
+    </media>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.plg_system_qlxxxxx.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.plg_system_qlxxxxx.sys.ini</language>
+    </languages>
+	<config>
+		<fields name="params">
+            <fieldset name="basic">
+                <field name="jquery" type="radio"
+                       default="1"
+                       class="btn-group"
+                       label="PLG_SYSTEM_QLXXXXX_JQUERY_LABEL"
+                       description="PLG_SYSTEM_QLXXXXX_JQUERY_DESC"
+                        >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+		</fields>
+	</config>
+</extension>
