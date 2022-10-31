@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension
 	type="module"
-	version="3.x"
+	version="1.0.0"
 	client="site"
 	method="upgrade">
 	<name>xxxxx</name>
@@ -11,13 +11,14 @@
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
 	<authorEmail>mareike.riegel@ql.de</authorEmail>
 	<authorUrl>ql.de</authorUrl>
-	<version>1.0</version>
+	<version>1.0.0</version>
 	<description>MOD_XXXXX_XML_DESCRIPTION</description>
 	<updateservers>
-        <server type="extension" priority="1" name="xxxxx - Updates"><![CDATA[https://www.blackforest-software.com/_scripts/updates/mod_xxxxx]]></server>
+        <server type="extension" priority="1" name="xxxxx - Updates">https://raw.githubusercontent.com/hoochicken/mod_qlform/main/_jupdate/mod_xxxxx.xml</server>
     </updateservers>
 	<files>
 		<filename module="mod_xxxxx">mod_xxxxx.php</filename>
+		<folder>_jupdate</folder>
 		<folder>css</folder>
 		<folder>js</folder>
 		<folder>language</folder>
@@ -25,6 +26,7 @@
 		<folder>php</folder>
 		<filename>helper.php</filename>
 		<filename>index.html</filename>
+		<filename>license.txt</filename>
 		<filename>mod_xxxxx.xml</filename>
 	</files>
 	<media folder="media" destination="mod_xxxxx">
