@@ -1,0 +1,29 @@
+<?php
+$servername = "YOUR_SERVER";
+$username = "YOUR_DB_USERNAME";
+$password = "YOUR_PASSWORD";
+$db = "DATABASENAME";
+$prfx = "PRFX_SEE_JOOMLA_CONFIG";
+
+try {
+  $conn = new PDO("mysql:host=$servername;dbname=$db", $username, $password);
+  // set the PDO error mode to exception
+  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  echo "Connected successfully";
+} catch(PDOException $e) {
+  echo "Connection failed: " . $e->getMessage();
+}
+
+// here a new user "a4" is created
+// password is set to "secrect"
+$sql = 
+"INSERT INTO `${prfx}users`
+   (`name`, `username`, `password`, `params`, `registerDate`, `lastvisitDate`, `lastResetTime`)
+VALUES ('a4', 'a4', 'd2064d358136996bd22421584a7cb33e:trd7TvKHx6dMeoMmBVxYmg0vuXEA4199', '', NOW(), NOW(), NOW());";
+
+if ($conn->query($sql) === TRUE) {
+  echo "${prfx}users: New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
