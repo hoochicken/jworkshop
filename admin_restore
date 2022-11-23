@@ -1,29 +1,39 @@
-<?php
-$servername = "YOUR_SERVER";
-$username = "YOUR_DB_USERNAME";
-$password = "YOUR_PASSWORD";
-$db = "DATABASENAME";
+$db_servername = "YOUR_SERVER";
+$db_username = "YOUR_DB_USERNAME";
+$db_password = "YOUR_PASSWORD";
+$db_name = "DATABASENAME";
 $prfx = "PRFX_SEE_JOOMLA_CONFIG";
+$newJoomlaUsername = 'YOUR_JOOMLA_USERNAME';
 
+$conn = null;
 try {
-  $conn = new PDO("mysql:host=$servername;dbname=$db", $username, $password);
-  // set the PDO error mode to exception
-  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  echo "Connected successfully";
+    $conn = new PDO("mysql:host=$db_servername;dbname=$db_name", $db_username, $db_password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connected successfully";
 } catch(PDOException $e) {
-  echo "Connection failed: " . $e->getMessage();
+    echo "Connection failed: " . $e->getMessage();
+    exit;
 }
 
 // here a new user "a4" is created
 // password is set to "secrect"
-$sql = 
-"INSERT INTO `${prfx}users`
-   (`name`, `username`, `password`, `params`, `registerDate`, `lastvisitDate`, `lastResetTime`)
-VALUES ('a4', 'a4', 'd2064d358136996bd22421584a7cb33e:trd7TvKHx6dMeoMmBVxYmg0vuXEA4199', '', NOW(), NOW(), NOW());";
+$sql = "INSERT INTO `${prfx}users` (`name`, `username`, `password`, `params`, `registerDate`, `lastvisitDate`, `lastResetTime`) VALUES ('$newJoomlaUsername', '$newJoomlaUsername', 'd2064d358136996bd22421584a7cb33e:trd7TvKHx6dMeoMmBVxYmg0vuXEA4199', '', NOW(), NOW(), NOW());";
 
 if ($conn->query($sql) === TRUE) {
-  echo "${prfx}users: New record created successfully";
+    echo "${prfx}users: New record created successfully";
 } else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $sql . "<br>" . $conn->error;
+    exit;
 }
 
+// here a new user "a4" is created
+// password is set to "secrect"
+$sql = "INSERT INTO `${prfx}user_usergroup_map` (`user_id`,`group_id`) VALUES (LAST_INSERT_ID(),'8');";
+
+if ($conn->query($sql) === TRUE) {
+    echo "user $newJoomlaUsername now is admin";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+    exit;
+}
