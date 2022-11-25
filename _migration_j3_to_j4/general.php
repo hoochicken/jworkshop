@@ -19,4 +19,4 @@ public $main = 'div';
 $tag = empty($tag) ? 'div' : $tag;
 
 
-$->aside ?? ''
+$obj_qlproto->aside ?? 'div'
