@@ -4,4 +4,10 @@ $app = Factory::getApplication();
 $menu= $app->getMenu();
 
 
-each(
+each()
+  
+shitBrowser
+  
+public $getClassMain = '';
+
+
