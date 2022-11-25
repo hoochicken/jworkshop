@@ -8,6 +8,6 @@ each()
   
 shitBrowser
   
+
 public $getClassMain = '';
-
-
+public $main = 'div';
