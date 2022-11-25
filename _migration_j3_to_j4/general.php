@@ -11,3 +11,6 @@ shitBrowser
 
 public $getClassMain = '';
 public $main = 'div';
+
+
+// $db->query($query);
