@@ -3,5 +3,7 @@
 $app = Factory::getApplication();
 $menu= $app->getMenu();
 
+public $getMain = '';
+public $aside = '';
 
 each(
