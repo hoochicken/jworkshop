@@ -5,7 +5,7 @@
  * @author 		Mareike Riegel mareike.riegel@ql.de
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
-
+use Joomla\CMS\Factory;
 // no direct access
 defined('_JEXEC') or die;
 $wa = Factory::getApplication()->getDocument()->getWebAssetManager();
