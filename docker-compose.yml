@@ -45,7 +45,7 @@ services:
       - "APACHE_DOCUMENT_ROOT=${DOCUMENT_ROOT}"
       - "PHP_IDE_CONFIG=serverName=workshop81.localhost"
     ports:
-      - 9014:80
+      - 9024:80
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.workshop81.rule=Host(`workshop81.localhost`)"
@@ -69,7 +69,7 @@ services:
       - "APACHE_DOCUMENT_ROOT=${DOCUMENT_ROOT}"
       - "PHP_IDE_CONFIG=serverName=workshop80.localhost"
     ports:
-      - 9015:80
+      - 9025:80
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.workshop80.rule=Host(`workshop80.localhost`)"
@@ -93,7 +93,7 @@ services:
       - "APACHE_DOCUMENT_ROOT=${DOCUMENT_ROOT}"
       - "PHP_IDE_CONFIG=serverName=workshop74.localhost"
     ports:
-      - 9016:80
+      - 9026:80
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.workshop74.rule=Host(`workshop74.localhost`)"
