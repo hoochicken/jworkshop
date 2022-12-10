@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension
 	type="module"
-	version="1.0.0"
 	client="site"
 	method="upgrade">
 	<name>xxxxx</name>

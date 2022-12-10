@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="plugin" version="3.9.10" group="content" method="upgrade">
+<extension type="plugin" group="content" method="upgrade">
     <name>PLG_CONTENT_QLXXXXX</name>
     <author>Mareike Riegel</author>
     <creationDate>September 2020</creationDate>

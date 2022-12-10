@@ -1,0 +1,82 @@
+version: "3.3"
+
+services:
+
+  workshop81:
+    build:
+      context: .
+      dockerfile: ./_dockerfiles/php8.1/Dockerfile
+    container_name: workshop81_c
+    volumes:
+      - .:/var/www/html
+    environment:
+      - "PHP_ENABLE_XDEBUG=1"
+      - "XDEBUG_CONFIG=idekey=PHPSTORM client_host=host.docker.internal xdebug.remote_port=9003 xdebug.discover_client_host=0 xdebug.start_with_request=yes xdebug.mode=develop,debug"
+      - "XDEBUG_MODE=develop,debug"
+      - "APACHE_DOCUMENT_ROOT=${DOCUMENT_ROOT}"
+      - "PHP_IDE_CONFIG=serverName=workshop81.localhost"
+    ports:
+      - 9024:80
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.workshop81.rule=Host(`workshop81.localhost`)"
+      - "traefik.http.routers.workshop81.entrypoints=web"
+    env_file:
+      - .env
+    networks:
+      - lily3
+
+  workshop80:
+    build:
+      context: .
+      dockerfile: ./_dockerfiles/php8.0/Dockerfile
+    container_name: workshop80_c
+    volumes:
+      - .:/var/www/html
+    environment:
+      - "PHP_ENABLE_XDEBUG=1"
+      - "XDEBUG_CONFIG=idekey=PHPSTORM client_host=host.docker.internal xdebug.remote_port=9003 xdebug.discover_client_host=0 xdebug.start_with_request=yes xdebug.mode=develop,debug"
+      - "XDEBUG_MODE=develop,debug"
+      - "APACHE_DOCUMENT_ROOT=${DOCUMENT_ROOT}"
+      - "PHP_IDE_CONFIG=serverName=workshop80.localhost"
+    ports:
+      - 9025:80
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.workshop80.rule=Host(`workshop80.localhost`)"
+      - "traefik.http.routers.workshop80.entrypoints=web"
+    env_file:
+      - .env
+    networks:
+      - lily3
+
+  workshop74:
+    build:
+      context: .
+      dockerfile: ./_dockerfiles/php7.4/Dockerfile
+    container_name: workshop74_c
+    volumes:
+      - .:/var/www/html
+    environment:
+      - "PHP_ENABLE_XDEBUG=1"
+      - "XDEBUG_CONFIG=idekey=PHPSTORM client_host=host.docker.internal xdebug.remote_port=9003 xdebug.discover_client_host=0 xdebug.start_with_request=yes xdebug.mode=develop,debug"
+      - "XDEBUG_MODE=develop,debug"
+      - "APACHE_DOCUMENT_ROOT=${DOCUMENT_ROOT}"
+      - "PHP_IDE_CONFIG=serverName=workshop74.localhost"
+    ports:
+      - 9026:80
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.workshop74.rule=Host(`workshop74.localhost`)"
+      - "traefik.http.routers.workshop74.entrypoints=web"
+    env_file:
+      - .env
+    networks:
+      - lily3
+
+
+networks:
+  lily3:
+
+volumes:
+  _dbdata:
