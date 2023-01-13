@@ -20,3 +20,7 @@ $tag = empty($tag) ? 'div' : $tag;
 
 
 $obj_qlproto->aside ?? 'div'
+
+  
+# ????
+echo $this->pagination->getPagesCounter(); 
