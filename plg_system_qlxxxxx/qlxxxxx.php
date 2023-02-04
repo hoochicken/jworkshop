@@ -26,7 +26,7 @@ class plgSystemQlxxxxx extends JPlugin
     {
         parent::__construct($subject, $config);
         $this->loadLanguage();
-        $this->includeScripts();
+        // $this->includeScripts();
     }
 
     /**
@@ -37,10 +37,9 @@ class plgSystemQlxxxxx extends JPlugin
         if (true === (bool) $this->params->get('jquery', false)) {
             JHtml::_('jquery.framework');
         }
-        JHtml::_('stylesheet', 'media/plg_system_qlxxxxx/css/qlxxxxx.css');
-        JHtml::_('script', 'media/plg_system_qlxxxxx/js/qlxxxxx.js');
-        // $objDoc = JFactory::getDocument();
-        // $objDoc->addScriptDeclaration('var qlSiteOffset=' . $offset . ';');
+        $wa = Factory::getApplication()->getDocument()->getWebAssetManager();
+        $wa->registerAndUseStyle('plg_system_qlxxxxx', 'plg_system_qlxxxxx/qlxxxxx.css');
+        $wa->registerAndUseScript('plg_system_qlxxxxx', 'plg_system_qlxxxxx/qlxxxxx.js');
     }
 
     /**

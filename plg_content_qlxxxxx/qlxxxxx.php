@@ -46,15 +46,7 @@ class plgContentQlxxxxx extends JPlugin
             return true;
         }
 
-        // check session if styles already loaded
-        $boolAlreadyLoadedStyles = defined('qlxxxxx_styles');
-        if (!$boolAlreadyLoadedStyles) {
-            if ($this->params->get('style')) {
-                $this->getStyles();
-            }
-            $this->includeScripts();
-            define('qlxxxxx_styles', true);
-        }
+        // $this->getStyles();
 
         //clear tags, tries to avoid code like <p><div> etc.
         $objArticle->text = $this->clearTags($objArticle->text);
@@ -235,8 +227,9 @@ class plgContentQlxxxxx extends JPlugin
         if (1 == $this->params->get('jquery')) {
             JHtml::_('jquery.framework');
         }
-        JHtml::_('script', JUri::root() . 'media/plg_content_qlxxxxx/js/qlxxxxx.js');
-        JHtml::_('stylesheet', JUri::root() . 'media/plg_content_qlxxxxx/css/qlxxxxx.css');
+        $wa = Factory::getApplication()->getDocument()->getWebAssetManager();
+        $wa->registerAndUseStyle('plg_content_qlxxxxx', 'plg_content_qlxxxxx/qlxxxxx.css');
+        $wa->registerAndUseScript('plg_content_qlxxxxx', 'plg_content_qlxxxxx/qlxxxxx.js');
     }
 
     /**
