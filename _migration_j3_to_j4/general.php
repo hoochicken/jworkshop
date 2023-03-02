@@ -3,6 +3,7 @@
 $app = Factory::getApplication();
 $menu= $app->getMenu();
 
+JHtml::_('content.prepare', $item->introtext, '', 'com_content.blog'); 
 
 each()
   
