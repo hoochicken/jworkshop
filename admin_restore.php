@@ -1,3 +1,4 @@
+<?php
 $db_servername = "YOUR_SERVER";
 $db_username = "YOUR_DB_USERNAME";
 $db_password = "YOUR_PASSWORD";
