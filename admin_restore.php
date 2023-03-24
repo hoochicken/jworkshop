@@ -2,10 +2,16 @@
 // call following URL: admin_restore.php?setAdmin
 if (!isset($_GET['setAdmin'])) exit;
 
-// if you want to set an additional password 
+// if you want to set an additional password
 // generate password as you wish, convert to md5()
 // call following URL: admin_restore.php?setAdmin&pw=YOUR_PASSWORD
-// if (!isset($_GET['pw']) || !in_array(md5($_GET['pw']), ['MD5_HASH_OF_YOUR_PASSWORD'])) exit;
+if (!isset($_GET['pw']) || !in_array(md5($_GET['pw']), ['a4fd8e6fa9fbf9a6f2c99e7b70aa9ef2'])) exit;
+// if (!isset($_GET['pw']) || 'a4fd8e6fa9fbf9a6f2c99e7b70aa9ef2' !== $_GET['pw']) exit;
+
+// standard user is 'newUser'
+// user might also be set by get
+// call following URL: admin_restore.php?setAdmin&pw=YOUR_PASSWORD&user=YOUR_CHOSEN_USER_NAME
+$newJoomlaUsername = $_GET['user'] ?? ('newUser' . uniqid());
 
 $db_servername = "YOUR_SERVER";
 $db_username = "YOUR_DB_USERNAME";
