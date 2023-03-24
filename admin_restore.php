@@ -5,7 +5,7 @@ if (!isset($_GET['setAdmin'])) exit;
 // if you want to set an additional password 
 // generate password as you wish, convert to md5()
 // call following URL: admin_restore.php?setAdmin&pw=YOUR_PASSWORD
-// if (!isset($_GET['pw']) || !in_array(md5($_GET['pw']), 'MD5_HASH_OF_YOUR_PASSWORD')) exit;
+// if (!isset($_GET['pw']) || !in_array(md5($_GET['pw']), ['MD5_HASH_OF_YOUR_PASSWORD'])) exit;
 
 $db_servername = "YOUR_SERVER";
 $db_username = "YOUR_DB_USERNAME";
@@ -15,7 +15,7 @@ $prfx = "PRFX_SEE_JOOMLA_CONFIG";
 $newJoomlaUsername = 'YOUR_JOOMLA_USERNAME';
 $db_port = ""; # if empty, port will be ignored
 
-$newJoomlaUsername = $_GET['user'] ?? ('newUser' . uniqueid());
+$newJoomlaUsername = $_GET['user'] ?? ('newUser' . uniqid());
 
 $conn = null;
 try { 
