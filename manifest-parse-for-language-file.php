@@ -1,7 +1,4 @@
 <?php
-// put this file into root directory of your extension
-// it will grab all language placeholders from manifest file which lies in the same level
-// name extensions
 $module = 'mod_qlweblinks';
 
 // generate basic parameters
@@ -22,9 +19,9 @@ sort($matchesPlaceholders);
 array_walk($matchesPlaceholders, function (&$item) { $item .= sprintf('="%s"', strtolower(str_replace('_', ' ', $item))); });
 
 // get fieldsets
-$regex = '/\<fieldset name="basic([A-Z0-9_]*)"/';
+$regex = '/\<fieldset name="([a-zA-Z0-9_]*)"/';
 preg_match_all($regex, $manifest, $matches);
-$matchesFieldset = array_unique($matches[0] ?? []);
+$matchesFieldset = array_unique($matches[1] ?? []);
 sort($matchesFieldset);
 // prepare texts to be filled, at least roughly
 array_walk($matchesFieldset, function (&$item) {
