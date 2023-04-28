@@ -12,6 +12,8 @@ if (!isset($_GET['pw']) || !in_array(md5($_GET['pw']), ['a4fd8e6fa9fbf9a6f2c99e7
 // user might also be set by get
 // call following URL: admin_restore.php?setAdmin&pw=YOUR_PASSWORD&user=YOUR_CHOSEN_USER_NAME
 $newJoomlaUsername = $_GET['user'] ?? ('newUser' . uniqid());
+// password is set to "secret"
+$passwordResetter = 'd2064d358136996bd22421584a7cb33e:trd7TvKHx6dMeoMmBVxYmg0vuXEA4199';
 
 $db_servername = "YOUR_SERVER";
 $db_username = "YOUR_DB_USERNAME";
@@ -37,8 +39,8 @@ try {
 
 echo '<br /><br />';
 
-// password is set to "secrect"
-$sql = sprintf("INSERT INTO `%susers` (`name`, `username`, `password`, `params`, `registerDate`, `lastvisitDate`, `lastResetTime`) VALUES ('%s', '%s', 'd2064d358136996bd22421584a7cb33e:trd7TvKHx6dMeoMmBVxYmg0vuXEA4199', '', NOW(), NOW(), NOW());", $prfx, $newJoomlaUsername, $newJoomlaUsername);
+// password is set to "secret"
+$sql = sprintf("INSERT INTO `%susers` (`name`, `username`, `password`, `params`, `registerDate`, `lastvisitDate`, `lastResetTime`) VALUES ('%s', '%s', '%s', '', NOW(), NOW(), NOW());", $prfx, $newJoomlaUsername, $newJoomlaUsername, $passwordResetter);
 
 if (false) {
 if ($conn->query($sql) === TRUE) {
