@@ -3,7 +3,7 @@
 	type="module"
 	client="site"
 	method="upgrade">
-	<name>xxxxx</name>
+	<name>qlxxxxx</name>
 	<author>Mareike Riegel</author>
 	<creationDate>2015</creationDate>
 	<copyright>ql.de</copyright>
@@ -11,12 +11,12 @@
 	<authorEmail>mareike.riegel@ql.de</authorEmail>
 	<authorUrl>ql.de</authorUrl>
 	<version>1.0.0</version>
-	<description>MOD_XXXXX_XML_DESCRIPTION</description>
+	<description>MOD_QLXXXXX_XML_DESCRIPTION</description>
 	<updateservers>
-        <server type="extension" priority="1" name="xxxxx - Updates">https://raw.githubusercontent.com/hoochicken/mod_qlform/main/_jupdate/mod_xxxxx.xml</server>
+        <server type="extension" priority="1" name="qlxxxxx - Updates">https://raw.githubusercontent.com/hoochicken/mod_qlform/main/_jupdate/mod_qlxxxxx.xml</server>
     </updateservers>
 	<files>
-		<filename module="mod_xxxxx">mod_xxxxx.php</filename>
+		<filename module="mod_qlxxxxx">mod_qlxxxxx.php</filename>
 		<folder>_jupdate</folder>
 		<folder>css</folder>
 		<folder>js</folder>
@@ -26,20 +26,20 @@
 		<filename>helper.php</filename>
 		<filename>index.html</filename>
 		<filename>license.txt</filename>
-		<filename>mod_xxxxx.xml</filename>
+		<filename>mod_qlxxxxx.xml</filename>
 	</files>
-	<media folder="media" destination="mod_xxxxx">
+	<media folder="media" destination="mod_qlxxxxx">
         <folder>css</folder>
         <folder>js</folder>
     </media>
 	<languages>
-		<language tag="en-GB">language/en-GB/en-GB.mod_xxxxx.ini</language>
-		<language tag="en-GB">language/en-GB/en-GB.mod_xxxxx.sys.ini</language>
-		<language tag="de-DE">language/de-DE/de-DE.mod_xxxxx.ini</language>
-		<language tag="de-DE">language/de-DE/de-DE.mod_xxxxx.sys.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_qlxxxxx.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_qlxxxxx.sys.ini</language>
+		<language tag="de-DE">language/de-DE/de-DE.mod_qlxxxxx.ini</language>
+		<language tag="de-DE">language/de-DE/de-DE.mod_qlxxxxx.sys.ini</language>
 	</languages>
 	<config>
-		<fields name="params" addfieldpath="/modules/mod_xxxxx/php/fields" addrulepath="/modules/mod_xxxxx/php/rules">
+		<fields name="params" addfieldpath="/modules/mod_qlxxxxx/php/fields" addrulepath="/modules/mod_qlxxxxx/php/rules">
             <fieldset name="basic">
 
             </fieldset>
