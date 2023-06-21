@@ -15,7 +15,8 @@ public $main = 'div';
 
 
 // $db->query($query);
-
+$$this->item->params('aliasoption') = $item->getParams('aliasoption');
+$itemParams = $item->getParams();
 
 $tag = empty($tag) ? 'div' : $tag;
 
