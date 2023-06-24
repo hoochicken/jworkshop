@@ -1,3 +1,14 @@
+Admin-Module 
+Position: menu
+<p>QUICKLINKS</p>
+<ul>
+<li><a href="/administrator/index.php?option=com_installer&amp;view=install" target="_self">Installation</a></li>
+<li><a href="/administrator/index.php?option=com_plugins" target="_self">Plugins</a></li>
+<li><a href="/administrator/index.php?option=com_modules&amp;view=modules&amp;client_id=0" target="_self">Modules</a></li>
+<li><a href="/administrator/index.php?option=com_templates&amp;view=templates&amp;client_id=0" target="_self">Templates</a></li>
+</ul>
+
+
 <?php 
 # clsQlproto.php::menu()
 $app = Factory::getApplication();
