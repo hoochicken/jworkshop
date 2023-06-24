@@ -14,15 +14,15 @@ defined('_JEXEC') or die;
 
 use Joomla\Utilities\ArrayHelper;
 
-$module  = $displayData['module'];
-$params  = $displayData['params'];
+$module = $displayData['module'];
+$params = $displayData['params'];
 
-if ((string) $module->content === '') {
+if ((string)$module->content === '') {
     return;
 }
-clsQlProto::getInfo($module);
+clsQlSvo::getInfo($module);
 if (empty($module->content)) return;
-elseif (0<strpos($params->get('moduleclass_sfx'),'bareback')) include __DIR__ . '/none.php';
-elseif (0<strpos($params->get('moduleclass_sfx'),'toggle')) include __DIR__ . '/toggle.php';
+elseif (0 < strpos($params->get('moduleclass_sfx'), 'bareback')) include __DIR__ . '/none.php';
+elseif (0 < strpos($params->get('moduleclass_sfx'), 'toggle')) include __DIR__ . '/toggle.php';
 else include __DIR__ . '/simple.php';
 return true;
