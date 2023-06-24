@@ -21,6 +21,8 @@ each()
 shitBrowser
   
 
+$this->columns = $this->params->get('num_columns', 1);
+  
 public $getClassMain = '';
 public $main = 'div';
 
