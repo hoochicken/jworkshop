@@ -6,12 +6,17 @@
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  */
 
+namespace Ql\Module\Qlxxxxx\Site;
+
 // no direct access
+use Joomla\CMS\Helper\ModuleHelper;
+use Ql\Module\Qlxxxxx\Site\QlxxxxxHelper;
+
 defined('_JEXEC') or die;
-require_once dirname(__FILE__).'/helper.php';
+require_once dirname(__FILE__).'/QlxxxxxHelper.php';
 
 /** @var $module  */
 /** @var $params  */
-$obj_helper = new modQlxxxxxHelper($module, $params);
+$qlxxxxxHelper = new QlxxxxxHelper($module, $params);
 
-require JModuleHelper::getLayoutPath('mod_qlxxxxx', $params->get('layout', 'default'));
+require ModuleHelper::getLayoutPath('mod_qlxxxxx', $params->get('layout', 'default'));

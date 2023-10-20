@@ -8,10 +8,14 @@
 use Joomla\CMS\Factory;
 // no direct access
 defined('_JEXEC') or die;
+/** @var stdClass $module */
+/** @var \Joomla\Registry\Registry $params */
+/** @var QlxxxxxHelper $qlxxxxxHelper */
 $wa = Factory::getApplication()->getDocument()->getWebAssetManager();
 $wa->registerStyle('qlxxxxx', 'mod_qlxxxxx/styles.css');
 $wa->useStyle('qlxxxxx');
 ?>
 
 <div class="qlxxxxx" id="module<?php echo $module->id ?>">
+    asdasdasd
 </div>
