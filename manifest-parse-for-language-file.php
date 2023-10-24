@@ -1,5 +1,5 @@
 <?php
-$module = 'mod_qlweblinks';
+$module = 'mod_qlquicklink';
 
 // generate basic parameters
 $manifest_path = $module . '.xml';
