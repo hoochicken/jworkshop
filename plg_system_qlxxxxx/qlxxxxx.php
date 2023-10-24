@@ -1,9 +1,9 @@
 <?php
 /**
- * @package		plg_system_qlxxxxx
- * @copyright	Copyright (C) 2019 ql.de All rights reserved.
- * @author 		Mareike Riegel mareike.riegel@ql.de
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @package        plg_system_qlxxxxx
+ * @copyright    Copyright (C) 2024 ql.de All rights reserved.
+ * @author        Mareike Riegel mareike.riegel@ql.de
+ * @license        GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 //no direct access
@@ -22,19 +22,19 @@ class plgSystemQlxxxxx extends JPlugin
      * @param $subject
      * @param $config
      */
-    public function __construct(& $subject, $config)
+    public function __construct(&$subject, $config)
     {
+        $lang = Factory::getApplication()->getLanguage();
+        $lang->load('plg_content_qlstatistics', dirname(__FILE__));
         parent::__construct($subject, $config);
-        $this->loadLanguage();
-        // $this->includeScripts();
     }
 
     /**
      *  method to get documents and scripts needed
      */
-    function includeScripts()
+    public function includeScripts()
     {
-        if (true === (bool) $this->params->get('jquery', false)) {
+        if ($this->params->get('jquery', false)) {
             JHtml::_('jquery.framework');
         }
         $wa = Factory::getApplication()->getDocument()->getWebAssetManager();
@@ -43,7 +43,7 @@ class plgSystemQlxxxxx extends JPlugin
     }
 
     /**
-     * 
+     *
      */
     public function onAfterRender()
     {
