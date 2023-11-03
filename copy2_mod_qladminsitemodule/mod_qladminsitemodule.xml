@@ -3,7 +3,7 @@
         type="module"
         client="administrator"
         method="upgrade">
-    <name>qlxxxxxadmin</name>
+    <name>qladminsitemodule</name>
     <author>Mareike Riegel</author>
     <creationDate>2015</creationDate>
     <copyright>ql.de</copyright>
@@ -11,35 +11,35 @@
     <authorEmail>mareike.riegel@ql.de</authorEmail>
     <authorUrl>ql.de</authorUrl>
     <version>1.0.0</version>
-    <description>MOD_QLXXXXXADMIN_XML_DESCRIPTION</description>
+    <description>MOD_QLADMINSITEMODULE_XML_DESCRIPTION</description>
     <updateservers>
-        <server type="extension" priority="1" name="qlxxxxxadmin - Updates">https://github.com/hoochicken/mod_qlxxxxxadmin/archive/refs/tags/v1.0.0.zip</server>
+        <server type="extension" priority="1" name="qladminsitemodule - Updates">https://github.com/hoochicken/mod_qladminsitemodule/archive/refs/tags/v1.0.0.zip</server>
     </updateservers>
     <files>
-        <filename module="mod_qlxxxxxadmin">mod_qlxxxxxadmin.php</filename>
+        <filename module="mod_qladminsitemodule">mod_qladminsitemodule.php</filename>
         <folder>_jupdate</folder>
         <folder>css</folder>
         <folder>js</folder>
         <folder>language</folder>
         <folder>tmpl</folder>
         <folder>php</folder>
-        <filename>QlxxxxxadminHelper.php</filename>
+        <filename>QladminsitemoduleHelper.php</filename>
         <filename>index.html</filename>
         <filename>license.txt</filename>
-        <filename>mod_qlxxxxxadmin.xml</filename>
+        <filename>mod_qladminsitemodule.xml</filename>
     </files>
-    <media folder="media" destination="mod_qlxxxxxadmin">
+    <media folder="media" destination="mod_qladminsitemodule">
         <folder>css</folder>
         <folder>js</folder>
     </media>
     <languages>
-        <language tag="en-GB">language/en-GB/en-GB.mod_qlxxxxxadmin.ini</language>
-        <language tag="en-GB">language/en-GB/en-GB.mod_qlxxxxxadmin.sys.ini</language>
-        <language tag="de-DE">language/de-DE/de-DE.mod_qlxxxxxadmin.ini</language>
-        <language tag="de-DE">language/de-DE/de-DE.mod_qlxxxxxadmin.sys.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_qladminsitemodule.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_qladminsitemodule.sys.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.mod_qladminsitemodule.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.mod_qladminsitemodule.sys.ini</language>
     </languages>
     <config>
-        <fields name="params" addfieldpath="/modules/mod_qlxxxxxadmin/php/fields" addrulepath="/modules/mod_qlxxxxxadmin/php/rules">
+        <fields name="params" addfieldpath="/modules/mod_qladminsitemodule/php/fields" addrulepath="/modules/mod_qladminsitemodule/php/rules">
             <fieldset name="basic">
 
             </fieldset>
