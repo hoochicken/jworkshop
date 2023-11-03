@@ -13,7 +13,7 @@ use Joomla\CMS\Helper\ModuleHelper;
 use Ql\Module\Qlxxxxx\Site\QlxxxxxHelper;
 
 defined('_JEXEC') or die;
-require_once dirname(__FILE__).'/QlxxxxxHelper.php';
+require_once __DIR__ . '/QlxxxxxHelper.php';
 
 /** @var $module  */
 /** @var $params  */
