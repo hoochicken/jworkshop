@@ -12,7 +12,7 @@ namespace Ql\Module\Qlxxxxx\Admin;
 use Joomla\CMS\Helper\ModuleHelper;
 
 defined('_JEXEC') or die;
-require_once dirname(__FILE__).'/helper.php';
+require_once __DIR__ . '/QlxxxxxadminHelper.php';
 
 /** @var $module  */
 /** @var $params  */
