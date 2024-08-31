@@ -1,0 +1,5 @@
+# https://github.com/PHP-CS-Fixer/PHP-CS-Fixer
+composer require --ignore-platform-req=IGNORE-PLATFORM-REQ --dev --with-all-dependencies friendsofphp/php-cs-fixer:*
+tools/php-cs-fixer/vendor/bin/php-cs-fixer fix src
+
+
