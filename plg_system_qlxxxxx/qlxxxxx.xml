@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="plugin" group="system" method="upgrade">
     <name>PLG_SYSTEM_QLXXXXX</name>
-    <author>Ingo Holewczuk; Mareike Riegel</author>
+    <author>Mareike Riegel</author>
     <creationDate>2024</creationDate>
     <copyright>Copyright (C) 2024 ql.de All rights reserved.</copyright>
     <authorEmail>mareike.riegel@ql.de</authorEmail>
-    <authorUrl>http://www.ql.de/</authorUrl>
-    <version>1.0.1</version>
+    <authorUrl>http://ql.de/</authorUrl>
+    <version>1.0.0</version>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
     <description>PLG_SYSTEM_QLXXXXX_DESCRIPTION</description>
     <files>
         <filename plugin="qlxxxxx">qlxxxxx.php</filename>
+        <filename plugin="qlxxxxx">qlxxxxx.xml</filename>
         <filename plugin="qlxxxxx">index.html</filename>
         <filename plugin="qlxxxxx">license.txt</filename>
         <folder plugin="qlxxxxx">language</folder>
     </files>
-    <media folder="media" destination="plg_system_qlxxxxx">
-        <folder>css</folder>
-        <folder>js</folder>
-    </media>
     <languages>
         <language tag="en-GB">language/en-GB/en-GB.plg_system_qlxxxxx.ini</language>
         <language tag="en-GB">language/en-GB/en-GB.plg_system_qlxxxxx.sys.ini</language>

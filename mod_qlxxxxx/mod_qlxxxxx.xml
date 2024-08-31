@@ -13,7 +13,7 @@
 	<version>1.0.0</version>
 	<description>MOD_QLXXXXX_XML_DESCRIPTION</description>
 	<updateservers>
-        <server type="extension" priority="1" name="qlxxxxx - Updates">https://raw.githubusercontent.com/hoochicken/mod_qlform/main/_jupdate/mod_qlxxxxx.xml</server>
+        <server type="extension" priority="1" name="qlxxxxx - Updates">https://raw.githubusercontent.com/hoochicken/mod_qlxxxxx/main/_jupdate/mod_qlxxxxx.xml</server>
     </updateservers>
 	<files>
 		<filename module="mod_qlxxxxx">mod_qlxxxxx.php</filename>
