@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" method="upgrade">
+    <name>MOD_HELLO_WORLD_TITLE</name>
+    <creationDate>2025-02-28</creationDate>
+    <author>Your Name</author>
+    <authorEmail>your.email@example.com</authorEmail>
+    <authorUrl>https://example.com</authorUrl>
+    <copyright>Copyright (C) 2025 Your Name. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later;</license>
+    <version>1.0.0</version>
+    <description><![CDATA[MOD_HELLO_WORLD_XML_DESCRIPTION]]></description>
+    <namespace path="src">Vendor\Module\HelloWorld</namespace>
+    <files>
+        <folder module="mod_hello_world">services</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+        <file>mod_hello_world.xml</file>
+    </files>
+    
+    <languages>
+        <language tag="en-GB">language/en-GB/mod_hello_world.ini</language>
+        <language tag="en-GB">language/en-GB/mod_hello_world.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldprefix="Vendor\Module\HelloWorld\Site\Field">
+        <field
+            name="moduleclass_sfx"
+            type="text"
+            label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+            description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+        />
+
+            </fieldset>
+        </fields>
+    </config>
+</extension>

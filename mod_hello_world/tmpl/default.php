@@ -1,8 +1,8 @@
 <?php
 /**
- * @package     Hoochicken\Module\Qlxxxxx
+ * @package     Vendor\Module\HelloWorld
  *
- * @copyright   Copyright (C) 2025 Mareike Riegel. All rights reserved.
+ * @copyright   Copyright (C) 2025 Your Name. All rights reserved.
  * @license     GNU General Public License version 2 or later;
  */
 
@@ -19,19 +19,24 @@ use Joomla\CMS\Factory;
 // Get the WebAsset Manager
 $wa = Factory::getApplication()->getDocument()->getWebAssetManager();
 
+
+
+// Add stylesheets and scripts
+
+
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx', ''), ENT_COMPAT, 'UTF-8');
 ?>
 
-<div class="<?php echo 'mod_qlxxxxx ' . $moduleclass_sfx; ?>">
+<div class="<?php echo 'mod_hello_world ' . $moduleclass_sfx; ?>">
     <?php if ($message->error) : ?>
         <div class="alert alert-error">
             <?php echo Text::_($message->error); ?>
         </div>
     <?php else : ?>
         <?php if ($message->show_title) : ?>
-            <h3><?php echo Text::_('MOD_QLXXXXX_TITLE'); ?></h3>
+            <h3><?php echo Text::_('MOD_HELLO_WORLD_TITLE'); ?></h3>
         <?php endif; ?>
-
+        
         <div class="module-content">
             <?php echo $message->message; ?>
         </div>
