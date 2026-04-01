@@ -10,8 +10,12 @@
     <version>1.0.0</version>
     <description><![CDATA[MOD_QLXXXXX_XML_DESCRIPTION]]></description>
     <namespace path="src">Hoochicken\Module\Qlxxxxx</namespace>
+	<updateservers>
+		<server type="extension" priority="1" name="qlxxxxx - Updates">https://raw.githubusercontent.com/hoochicken/mod_qlxxxxx/main/_jupdate/mod_qlxxxxx.xml</server>
+	</updateservers>
     <files>
         <folder module="mod_qlxxxxx">services</folder>
+        <folder>_jupdate</folder>
         <folder>language</folder>
         <folder>services</folder>
         <folder>src</folder>
