@@ -1,0 +1,40 @@
+
+<div id="iframe-container" style="height:300px;background-image:url('BACKGROUND_IMAGE')"></div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const button = document.createElement("button");
+    button.innerText = "Video laden";
+    button.style.padding = "10px 20px";
+    button.style.cursor = "pointer";
+    button.style.border = "none";
+    button.style.background = "#007bff";
+    button.style.color = "white";
+    button.style.borderRadius = "5px";
+    
+    const container = document.getElementById("iframe-container");
+    container.appendChild(button);
+    
+    button.addEventListener("click", function () {
+      let confirmText = 'Hier wird ein der Inhalt einer externen Datenquelle in einem Iframe angezeigt werden, wenn Sie dies so wünschen. Der externe Inhalt wird durch ein Unternehmen geschickt, die manche Ihrer geschickten Daten speichert und auswertet. Klicken Sie OKAY, wenn Sie zustimmen; andernfalls klicken Sie ABLEHNEN.'
+      if (!confirm(confirmText)) {
+        return;
+      }
+      
+      const iframe = document.createElement("iframe");
+        iframe.src = "IFRAME_URL"; 
+        iframe.width = "100%";
+        iframe.height = "300px";
+        iframe.style.border = "none";
+        
+        container.innerHTML = ""; // Remove button before adding iframe
+        container.appendChild(iframe);
+      
+      document.getElementById('iframe-container').style.backgroundImage = 'none';
+    });
+});
+
+</script>
+
+
