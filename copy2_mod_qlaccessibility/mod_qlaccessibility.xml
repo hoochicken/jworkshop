@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" method="upgrade">
+    <name>MOD_QLACCESSIBILITY_TITLE</name>
+    <creationDate>2025-02-28</creationDate>
+    <author>Mareike Riegel</author>
+    <authorEmail>info@ql.de</authorEmail>
+    <authorUrl>https://ql.de</authorUrl>
+    <copyright>Copyright (C) 2025 Mareike Riegel. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later;</license>
+    <version>1.0.0</version>
+    <description><![CDATA[MOD_QLACCESSIBILITY_XML_DESCRIPTION]]></description>
+    <namespace path="src">Hoochicken\Module\Qlaccessibility</namespace>
+    <files>
+        <folder module="mod_qlaccessibility">services</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+        <file>mod_qlaccessibility.xml</file>
+    </files>
+    
+    <media destination="mod_qlaccessibility" folder="media">
+        <filename>css/mod_qlaccessibility.css</filename>
+        <filename>js/mod_qlaccessibility.js</filename>
+    </media>
+    <languages>
+        <language tag="en-GB">language/en-GB/mod_qlaccessibility.ini</language>
+        <language tag="en-GB">language/en-GB/mod_qlaccessibility.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldprefix="Hoochicken\Module\Qlaccessibility\Site\Field">
+        <field
+            name="moduleclass_sfx"
+            type="text"
+            label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+            description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+        />
+
+            </fieldset>
+        </fields>
+    </config>
+</extension>

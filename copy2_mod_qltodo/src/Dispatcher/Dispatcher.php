@@ -1,23 +1,23 @@
 <?php
 /**
- * @package     Hoochicken\Module\Qlxxxxx
+ * @package     Hoochicken\Module\Qltodo
  *
  * @copyright   Copyright (C) 2025 Mareike Riegel. All rights reserved.
  * @license     GNU General Public License version 2 or later;
  */
 
-namespace Hoochicken\Module\Qlxxxxx\Site\Dispatcher;
+namespace Hoochicken\Module\Qltodo\Site\Dispatcher;
 
 defined('_JEXEC') or die;
 
 use Exception;
-use Hoochicken\Module\Qlxxxxx\Site\Helper\DisplayData;
-use Hoochicken\Module\Qlxxxxx\Site\Helper\DisplayDataInterface;
-use Hoochicken\Module\Qlxxxxx\Site\Helper\ParametersCustom;
+use Hoochicken\Module\Qltodo\Site\Helper\DisplayData;
+use Hoochicken\Module\Qltodo\Site\Helper\DisplayDataInterface;
+use Hoochicken\Module\Qltodo\Site\Helper\ParametersCustom;
 use Joomla\CMS\Dispatcher\AbstractModuleDispatcher;
 use Joomla\CMS\Helper\HelperFactoryAwareInterface;
 use Joomla\CMS\Helper\HelperFactoryAwareTrait;
-use Hoochicken\Module\Qlxxxxx\Site\Helper\QlxxxxxHelper;
+use Hoochicken\Module\Qltodo\Site\Helper\QltodoHelper;
 use Joomla\CMS\Helper\ModuleHelper;
 use Joomla\Registry\Registry;
 
@@ -39,7 +39,7 @@ class Dispatcher extends AbstractModuleDispatcher implements HelperFactoryAwareI
 
             /** @var ParametersCustom $displayData */
             $displayData = $displayData['data'] ?? null;
-            require ModuleHelper::getLayoutPath('mod_qlxxxxx', $displayData->getLayout());
+            require ModuleHelper::getLayoutPath('mod_qltodo', $displayData->getLayout());
         } catch (Exception $e) {
             echo $e->getMessage();
         }
@@ -68,8 +68,8 @@ class Dispatcher extends AbstractModuleDispatcher implements HelperFactoryAwareI
         $data = parent::getLayoutData();
         $this->params = new Registry($data['params']);
 
-        /** @var QlxxxxxHelper $helper */
-        $helper = $this->getHelperFactory()->getHelper(QlxxxxxHelper::class);
+        /** @var QltodoHelper $helper */
+        $helper = $this->getHelperFactory()->getHelper(QltodoHelper::class);
 
         $params = new ParametersCustom($this->params ?? null, $this->module);
         $displayData = new DisplayData($params);

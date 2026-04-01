@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: ./_dockerfiles/php8.1/Dockerfile
-    container_name: workshop81_c
+    container_name: workshop81c
     volumes:
       - .:/var/www/html
     environment:
@@ -24,11 +24,11 @@ services:
     env_file:
       - .env
     networks:
-      - qltemplate_lily2
+      - worky
 
 networks:
-  qltemplate_lily2:
-    external: true
+  worky:
+    name: lily_network
 
 volumes:
   _dbdata:

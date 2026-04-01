@@ -1,12 +1,12 @@
 <?php
 /**
- * @package     Hoochicken\Module\Qlxxxxx
+ * @package     Hoochicken\Module\Qlslideshow
  *
  * @copyright   Copyright (C) 2025 Mareike Riegel. All rights reserved.
  * @license     GNU General Public License version 2 or later;
  */
 
-namespace Hoochicken\Module\Qlxxxx\Site\Helper;
+namespace Hoochicken\Module\Qlslideshow\Site\Helper;
 
 defined('_JEXEC') or die;
 
@@ -16,7 +16,7 @@ use Joomla\Registry\Registry;
 use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\Database\DatabaseInterface;
 
-class QlxxxxxHelper
+class QlslideshowHelper
 {
     public function getMessage(Registry $params, $app): object
     {

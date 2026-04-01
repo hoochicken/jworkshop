@@ -105,12 +105,12 @@ services:
     networks:
       - lily2
 
-  mail:
+  mail2:
     image: mailhog/mailhog
     container_name: mailhogc
     ports:
       - 1025:1025 # smtp server
-      - 8025:8025 # web ui
+      - 8026:8025 # web ui
     logging:
       driver: 'none'  # disable saving logs
     labels:

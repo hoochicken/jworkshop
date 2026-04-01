@@ -1,6 +1,6 @@
 <?php
 /**
- * @package     Hoochicken\Module\Qlxxxxx
+ * @package     Hoochicken\Module\Qltodo
  *
  * @copyright   Copyright (C) 2025 Mareike Riegel. All rights reserved.
  * @license     GNU General Public License version 2 or later;
@@ -22,8 +22,8 @@ return new class() implements ServiceProviderInterface
     {
         static::requireOnceIfPhpDoesNotKnowamespaces();
 
-        $container->registerServiceProvider(new ModuleDispatcherFactory('\Hoochicken\Module\Qlxxxxx'));
-        $container->registerServiceProvider(new HelperFactory('\Hoochicken\Module\Qlxxxxx\Site\Helper'));
+        $container->registerServiceProvider(new ModuleDispatcherFactory('\Hoochicken\Module\Qltodo'));
+        $container->registerServiceProvider(new HelperFactory('\Hoochicken\Module\Qltodo\Site\Helper'));
         $container->registerServiceProvider(new Module());
     }
 

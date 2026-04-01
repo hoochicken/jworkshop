@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" client="site" method="upgrade">
-    <name>MOD_QLXXXXX_TITLE</name>
+    <name>MOD_QLTODO_TITLE</name>
     <creationDate>2025-02-28</creationDate>
     <author>Mareike Riegel</author>
     <authorEmail>info@ql.de</authorEmail>
@@ -8,32 +8,32 @@
     <copyright>Copyright (C) 2025 Mareike Riegel. All rights reserved.</copyright>
     <license>GNU General Public License version 2 or later;</license>
     <version>1.0.0</version>
-    <description><![CDATA[MOD_QLXXXXX_XML_DESCRIPTION]]></description>
-    <namespace path="src">Hoochicken\Module\Qlxxxxx</namespace>
+    <description><![CDATA[MOD_QLTODO_XML_DESCRIPTION]]></description>
+    <namespace path="src">Hoochicken\Module\Qltodo</namespace>
     <files>
-        <folder module="mod_qlxxxxx">services</folder>
+        <folder module="mod_qltodo">services</folder>
         <folder>language</folder>
         <folder>services</folder>
         <folder>src</folder>
         <folder>tmpl</folder>
-        <file>mod_qlxxxxx.xml</file>
+        <file>mod_qltodo.xml</file>
     </files>
     
-    <media destination="mod_qlxxxxx" folder="media">
-        <filename>css/mod_qlxxxxx.css</filename>
-        <filename>js/mod_qlxxxxx.js</filename>
+    <media destination="mod_qltodo" folder="media">
+        <filename>css/mod_qltodo.css</filename>
+        <filename>js/mod_qltodo.js</filename>
     </media>
     <languages>
-        <language tag="en-GB">language/en-GB/mod_qlxxxxx.ini</language>
-        <language tag="en-GB">language/en-GB/mod_qlxxxxx.sys.ini</language>
+        <language tag="en-GB">language/en-GB/mod_qltodo.ini</language>
+        <language tag="en-GB">language/en-GB/mod_qltodo.sys.ini</language>
     </languages>
     <config>
         <fields name="params">
-            <fieldset name="content" label="MOD_QLXXXXX_FIELDSET_BASIC_LABEL">
-                <field name="message" type="editor" label="MOD_QLXXXXX_MESSAGE_LABEL" description="MOD_QLXXXXX_MESSAGE_DESC"
+            <fieldset name="content" label="MOD_QLTODO_FIELDSET_BASIC_LABEL">
+                <field name="message" type="editor" label="MOD_QLTODO_MESSAGE_LABEL" description="MOD_QLTODO_MESSAGE_DESC"
                        toolbar_location="top" toolbar_position="top" toolbar_align="left" filter="safehtml" />
             </fieldset>
-            <fieldset name="basic" addfieldprefix="Hoochicken\Module\Qlxxxxx\Site\Field">
+            <fieldset name="basic" addfieldprefix="Hoochicken\Module\Qltodo\Site\Field">
                 <field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
                 <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" class="form-select" validate="moduleLayout"
                        default="default"/>
