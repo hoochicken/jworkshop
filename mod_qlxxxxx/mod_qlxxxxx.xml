@@ -24,6 +24,7 @@
     </files>
     
     <media destination="mod_qlxxxxx" folder="media">
+        <filename>joomla.asset.json</filename>
         <filename>css/mod_qlxxxxx.css</filename>
         <filename>js/mod_qlxxxxx.js</filename>
     </media>
