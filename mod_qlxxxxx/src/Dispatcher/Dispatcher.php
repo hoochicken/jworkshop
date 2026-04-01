@@ -25,6 +25,7 @@ class Dispatcher extends AbstractModuleDispatcher implements HelperFactoryAwareI
 {
     use HelperFactoryAwareTrait;
 
+    private const HELPER_NAME = 'QlxxxxxHelper';
     private ?Registry $params = null;
 
     public function dispatch()
@@ -69,7 +70,7 @@ class Dispatcher extends AbstractModuleDispatcher implements HelperFactoryAwareI
         $this->params = new Registry($data['params']);
 
         /** @var QlxxxxxHelper $helper */
-        $helper = $this->getHelperFactory()->getHelper(QlxxxxxHelper::class);
+        $helper = $this->getHelperFactory()->getHelper(self::HELPER_NAME);
 
         $params = new ParametersCustom($this->params ?? null, $this->module);
         $displayData = new DisplayData($params);
